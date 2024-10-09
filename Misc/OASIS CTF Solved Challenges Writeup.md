@@ -137,7 +137,8 @@ Then you send a POST request to `/game?name=cryptonite`, which asks to add a `ra
 **Flag:** `OASIS{G37_d035_n07_4lw4y5_G37_th1ng5}`
 
 **Prerequisite Knowledge:** URL parameters, User Agents
-**New Learnings: 
+
+**New Learnings:**
 - curl, POST requests
 
 ## 23/A Rocky Start
