@@ -5,11 +5,11 @@
 
 This was a simple challenge based on understanding of file paths. The webpage had a portal that could only read relative file paths.
 
-
+[[https://github.com/tnmyhere/cryptnotes/blob/main/media/web_forbiddenpaths_1.png]]
 
 Since it was mentioned that the website files are in the `/usr/share/nginx/html/` directory, simply we could write the relative path for `/flag.txt` as `../../../../flag.txt`, which gave the flag.
 
-
+[[https://github.com/tnmyhere/cryptnotes/blob/main/media/web_forbiddenpaths_2.png]]
 
 **Learnt:** file paths in linux
 
@@ -24,19 +24,19 @@ Since it was mentioned that the website files are in the `/usr/share/nginx/html/
 
 On reading the challenge, we had been given a web portal with one form field, where my initial guess was to enter different values, and see how the "cookie" in the "Application" tab of the webpage changed.
 
-
+[[https://github.com/tnmyhere/cryptnotes/blob/main/media/web_cookies_1.png]]
 
 I noticed that on entering cookie names, the value of the cookie changed to a different integer. We also a got a banner which said "That is a cookie! Not very special though..." which meant that we were going in the right direction, and had to look for the appropriate cookie value.
 
-
+[[https://github.com/tnmyhere/cryptnotes/blob/main/media/web_cookies_2.png]]
 
 So I tried to set the `value` for the cookie, in a range from `1` to `18`. 
 
-
+[[https://github.com/tnmyhere/cryptnotes/blob/main/media/web_cookies_3.png]]
 
 Finally, on setting the cookie `value` to `18`, the website displayed the flag in plaintext.
 
-
+[[https://github.com/tnmyhere/cryptnotes/blob/main/media/web_cookies_4.png]]
 
 **Learnt:** cookie manipulation
 
