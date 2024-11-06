@@ -59,8 +59,8 @@ steghide man page
 
 ## tunn3l_v1s10n
 
-**Flag: `picoCTF{qu1t3_a_v13w_2020}`
-Difficulty:** `medium`
+**Flag: `picoCTF{qu1t3_a_v13w_2020}`**
+**Difficulty:** `medium`
 
 We are given a file called `tunn3l_v1s10n` but the filetype is not identifiable.
 
@@ -125,7 +125,7 @@ Using the formula, `Total Pixel Data Size = Row Size × Height`, we know the
 
 The file was recovered and the flag was obtained within the image.
 
-![](/media/forensics_tunnelvision_4.png)
+![](/media/forensics_tunnelvision_4.bmp)
 
 **Learnt:** image headers, .bmp files
 
