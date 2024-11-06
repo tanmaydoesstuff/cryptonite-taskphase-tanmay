@@ -134,3 +134,16 @@ The file was recovered and the flag was obtained within the image.
 
 **References:**
 https://docs.fileformat.com/image/bmp/
+
+---
+
+## So Meta
+
+**Flag: `picoCTF{s0_m3ta_fec06741}`**
+**Difficulty:** `easy`
+
+We are given a picture, and the challenge title asks us to explore the metadata. I simply scanned for metadata using [aperisolve.fr](https://aperisolve.fr) and found the flag in the artist parameter of the image.
+
+![](/media/forensics_someta_1.png)
+
+**Learnt:** image metadata
