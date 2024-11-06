@@ -40,5 +40,5 @@ Finally, on setting the cookie `value` to `18`, the website displayed the flag i
 
 **Learnt:** cookie manipulation
 
-**Challenges:**
+**Challenges/Wrong Approaches:**
 Since it was time consuming to manually try to change every variable, I tried to execute a script in the console using JS to try out all cookie values from 0 to 50, but that did not work, so I had to manually change cookie values one by one. I was able to figure out that there are only 30 possible values through elimination.
