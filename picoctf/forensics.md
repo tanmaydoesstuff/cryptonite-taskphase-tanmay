@@ -45,7 +45,7 @@ We obtain the flag in the `flag.txt` file.
 1. wireshark
 2. steghide
 
-**Challenges:**
+**Challenges/Wrong Approaches:**
 1. It was unclear on how to extract the files from Wireshark, but I later realised that TFTP is a protocol that could be used.
 
 **References:**
@@ -129,8 +129,9 @@ The file was recovered and the flag was obtained within the image.
 
 **Learnt:** image headers, .bmp files
 
-**Challenges**:
-1. Had to figure out what part of the hex of the bmp file to edit.
+**Challenges/Wrong Approaches**:
+1. Had to figure out what part of the hex of the bmp file to edit, was editing the wrong bits.
+2. Tried to edit width instead of height.
 
 **References:**
 https://docs.fileformat.com/image/bmp/
@@ -147,3 +148,26 @@ We are given a picture, and the challenge title asks us to explore the metadata.
 ![](/media/forensics_someta_1.png)
 
 **Learnt:** image metadata
+
+---
+
+## m00walk
+
+**Flag: `picoCTF{beep_boop_im_in_space}`**
+**Difficulty:** `easy`
+
+We are given a .wav file and on playing it we get a hint of encoded data. My initial guess was to try for a spectrogram, using Audacity, but that didn't lead to any valuable results.
+
+Then I read the hint given, which is "How did pictures from the moon landing get sent back to Earth?". Googling for this gives us something called `SSTV`, which was used to convert audio data to images.
+
+Then I found a decoder tool called `RX-SSTV` to decrypt the encoded data to convert it to an image. But it was only available for Windows. I then found another tool available for mobile on Android called `Robots36`.
+
+Using that tool, I just played the audio and it output an image that included the flag.
+
+![](/media/forensics_moonwalk_1.jpeg)
+
+**Learnt:** SSTV encoding
+
+**Challenges/Wrong Approaches**: Unable to find SSTV decoders for linux that were working properly
+
+**References:** https://www.qsl.net/on6mu/rxsstv.htm
