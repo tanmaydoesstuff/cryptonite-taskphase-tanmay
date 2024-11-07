@@ -74,7 +74,7 @@ Then, when we use the standard payload to exploit XXE to obtain files. In this c
 
 On passing this payload, the data file now updated to contain the flag.
 
-![](/media/web_soap_3.png)
+![](/media/web_soap_3.jpeg)
 
 **Learnt:** XXE injection, burp suite
 
