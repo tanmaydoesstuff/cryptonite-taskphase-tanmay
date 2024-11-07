@@ -52,11 +52,11 @@ Since it was time consuming to manually try to change every variable, I tried to
 
 On opening the web portal and using `Inspect Element`, we find a file in the sources called `xmlDetailsCheckPayload.js`. On further searching for XML vulnerabilities, we are pointed to a XXE injection. 
 
-![[web_soap_1.png]]
+![[/media/web_soap_1.png]]
 
 Then, under the `Network` tab in `Inspect Element`, we monitor traffic and observe that on pressing the details button on the web portal, a `POST` request is made, called `data`. 
 
-![[web_soap_2.png]]
+![[/media/web_soap_2.png]]
 
 Then, when we use the standard payload to exploit XXE to obtain files. In this case, we're trying to obtain the contents of the `/etc/passwd` file, so the payload is:
 
@@ -74,7 +74,7 @@ Then, when we use the standard payload to exploit XXE to obtain files. In this c
 
 On passing this payload, the data file now updated to contain the flag.
 
-![[web_soap_3.png]]
+![[/media/web_soap_3.png]]
 
 **Learnt:** XXE injection, burp suite
 
