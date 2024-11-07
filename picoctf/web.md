@@ -42,3 +42,49 @@ Finally, on setting the cookie `value` to `18`, the website displayed the flag i
 
 **Challenges/Wrong Approaches:**
 Since it was time consuming to manually try to change every variable, I tried to execute a script in the console using JS to try out all cookie values from 0 to 50, but that did not work, so I had to manually change cookie values one by one. I was able to figure out that there are only 30 possible values through elimination.
+
+---
+
+## SOAP
+
+**Flag: `picoCTF{XML_3xtern@l_3nt1t1ty_e5f02dbf}`**
+**Difficulty:** `medium`
+
+On opening the web portal and using `Inspect Element`, we find a file in the sources called `xmlDetailsCheckPayload.js`. On further searching for XML vulnerabilities, we are pointed to a XXE injection. 
+
+![[web_soap_1.png]]
+
+Then, under the `Network` tab in `Inspect Element`, we monitor traffic and observe that on pressing the details button on the web portal, a `POST` request is made, called `data`. 
+
+![[web_soap_2.png]]
+
+Then, when we use the standard payload to exploit XXE to obtain files. In this case, we're trying to obtain the contents of the `/etc/passwd` file, so the payload is:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data [
+<!ENTITY file SYSTEM "file:///etc/passwd"> 
+]>
+<data>
+<ID>
+&file;
+</ID>
+</data>
+```
+
+On passing this payload, the data file now updated to contain the flag.
+
+![[web_soap_3.png]]
+
+**Learnt:** XXE injection, burp suite
+
+**Challenges/Wrong Approaches:** I had to figure how to send `POST` requests through burp suite, but got no response. So I tried to use the `Network` tab to edit the `POST` request and send it with the modified payload instead.
+
+**References:** 
+https://portswigger.net/web-security/xxe
+https://en.wikipedia.org/wiki/SOAP
+
+
+
+
+
