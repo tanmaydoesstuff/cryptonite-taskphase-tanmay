@@ -1,13 +1,18 @@
 # Cryptnotes
-Cryptnotes is a repository of cybersecurity write-ups covering challenges from Cryptonite Task Phase: pwn.college's Linux Luminarium dojo, OverTheWire's Bandit game, and selected PicoCTF gym tasks.
-
+Cryptnotes is a repository of cybersecurity write-ups. It covers challenges from [Cryptonite]([onite-MIT](https://github.com/Cryptonite-MIT))'s Task Phase: pwn.college's Linux Luminarium dojo, OverTheWire's Bandit wargame, and selected PicoCTF gym tasks along with writeups for CTF events held during this period.
 
 ## Table of Contents
+- [Notes](#reference-notes)
 - [Miscellaneous](#miscellaneous)
   - [OverTheWire Bandit](#overthewire-bandit)
-  - [OasisCTF](#oasisctf)
+  - [CTF Writeups](#ctf-writeups)
 - [PicoCTF](#picoctf)
 - [PWN College](#pwn-college)
+
+---
+
+## Reference Notes
+- [Linux CLI](https://github.com/tnmyhere/cryptnotes/blob/main/notes/linuxcli.md)
 
 ---
 
@@ -20,8 +25,13 @@ Cryptnotes is a repository of cybersecurity write-ups covering challenges from C
 - [Level 2-3](https://github.com/tnmyhere/cryptnotes/blob/main/misc/overthewire_bandit/L2-3.md)
 - [Level 3-4](https://github.com/tnmyhere/cryptnotes/blob/main/misc/overthewire_bandit/L3-4.md)
 
+## CTF Writeups
+
 ### OasisCTF
 - [OasisCTF Notes](https://github.com/tnmyhere/cryptnotes/blob/main/misc/oasisctf.md)
+
+### niteCTF 2024
+- [niteCTF Notes](https://github.com/tnmyhere/cryptnotes/blob/main/misc/nitectf.md)
 
 ---
 
