@@ -1,3 +1,7 @@
+[Event GitHub Repo](https://github.com/Cryptonite-MIT/oasisCTF-2024)
+Team: Finders of Flags
+Challenges Solved: 23
+
 ## 4/Ready Player One
  A simple challenge, I recognised the file is trying to convey something in morse code and then used an [online decoder](https://morsecode.world/international/decoder/audio-decoder-adaptive.html) at `morsecode.world` to obtain the flag.
  
