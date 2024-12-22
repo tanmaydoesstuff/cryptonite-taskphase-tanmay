@@ -94,17 +94,17 @@ My initial guess was to look up the font files, since "Roboto Sans" is the name 
 
 My second guess was the `robots.txt` file of the website, a text file that tells search engine crawlers which URLs and directories on a website they can access.
 
-![[Pasted image 20241222165422.png]]
+![](/media/web_robotosans_1.png)
  
  We find a strange text that seems to be encoded in base 64. On decoding, it gives out an error that the input is malformed. 
 
-![[Pasted image 20241222170737.png]]
+![](/media/web_robotosans_2.png)
  
  But when we try to decrypt each line from the text individually from base 64, we do get some output as seen below.
 
-![[Pasted image 20241222170828.png]]
+![](/media/web_robotosans_3.png)
 
-![[Pasted image 20241222170708.png]]
+![](/media/web_robotosans_4.png)
 
 On trying both backlinks, we find the flag by navigating to `/js/myfile.txt` on the website.
 
@@ -123,8 +123,7 @@ https://en.wikipedia.org/wiki/Robots.txt
 
 As suggested by the challenge name, my initial guess was to manipulate the cookie to appear as another user. In this case, the website asked us to login as guest. On navigating to the `Application` tab, under `Cookies`, we find cookie `isAdmin` with value set to `0`. On setting this value to `1` (or true), the flag is obtained.
 
-![[Pasted image 20241222171800.png]]
-
+![](/media/web_powercookie_1.png)
 **Learnt:** cookie manipulation for session hijacking
 
 **References:** 

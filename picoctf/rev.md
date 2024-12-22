@@ -115,9 +115,77 @@ https://bito.ai/resources/java-byte-array-java-explained
 ---
 ## ARMssembly 1
 **Flag: `picoCTF{0000001b}`**
-**Difficulty:** `medium`
+**Difficulty:** `hard`
 
-In this challenge we have been given an assembly file, going through the main function,
+In this challenge we have been given an assembly file, going through it bit by bit,
+```
+	.arch armv8-a
+	.file	"chall_1.c"
+	.text
+	.align	2
+	.global	func
+	.type	func, %function
+```
+
+This gives us information that the architecture being used is ARM v8a. We can refer to online ARM64 documentation to get well versed with it.
+
+Now we have the `func`,
+```
+func:
+	sub	sp, sp, #32
+	str	w0, [sp, 12]
+	mov	w0, 81
+	str	w0, [sp, 16]
+	str	wzr, [sp, 20]
+	mov	w0, 3
+	str	w0, [sp, 24]
+	ldr	w0, [sp, 20]
+	ldr	w1, [sp, 16]
+	lsl	w0, w1, w0
+	str	w0, [sp, 28]
+	ldr	w1, [sp, 28]
+	ldr	w0, [sp, 24]
+	sdiv	w0, w1, w0
+	str	w0, [sp, 28]
+	ldr	w1, [sp, 28]
+	ldr	w0, [sp, 12]
+	sub	w0, w1, w0
+	str	w0, [sp, 28]
+	ldr	w0, [sp, 28]
+	add	sp, sp, 32
+	ret
+	.size	func, .-func
+	.section	.rodata
+	.align	3
+```
+
+The following operations happen on the stack:
+
+We can understand these one by one to understand how the stack operates here. First, the stack is initialized by subtracting 32 from the stack pointer (`sp`), allocating space on the stack.
+
+Then, a `w0` (which will be very useful later) is stored at `sp + 12`.
+Then `81` is written to `w0` (moved to it).
+Then `w0` is stored at `sp + 16`. (`sp + 16` = `81`)
+Then a `wzr` (zero register) is stored at `sp + 20`. (`sp + 20` = `0`)
+Now, `3` is written to `w0`. (`w0` = `3`)
+Now `w0` is stored at `sp + 24` (`sp + 24` = `3`)
+Then, the value at `sp + 20` (which is `0`) is loaded into `w0`.
+The value at `sp + 16` (which is `81`) is loaded into `w1`.
+Then, an LSL (Logical Shift Left) operation is performed, where `w1` (which is `81`) is shifted left by `w0` (which is `0`). This results in `w0` being `81`.
+Now `w0` (which is `81`) is stored at `sp + 28`.
+Then, the value at `sp + 28` (which is `81`) is loaded into `w1`.
+Next, the value at `sp + 24` (which is `3`) is loaded into `w0`.
+Now, a signed division (`sdiv`) is performed, where `w1` (which is `81`) is divided by `w0` (which is `3`). This results in `w0` being `27`.
+Then, the value of `w0` (which is `27`) is stored at `sp + 28`.
+The value at `sp + 28` (which is `27`) is loaded into `w1`.
+Next, the value at `sp + 12` (the original value of `w0` passed into the function) is loaded into `w0`.
+Then, `w1` (which is `27`) is subtracted by `w0` (the original value). The result is stored back into `w0`.
+Now `w0` (the result of the subtraction, `27-w0`) is stored at `sp + 28`.
+Then, the value at `sp + 28` (which is the result of the subtraction) is loaded back into `w0`.
+
+Finally, the stack pointer is restored by adding 32 to `sp`, effectively deallocating the stack space that was reserved earlier. The function is returned.
+
+Looking at the main function,
 ```
 stp    x29, x30, [sp, -48]!    // Pushes x29 (Frame Pointer) and x30 (Link Register) by 48 i.e. allocates 48 bytes
 add    x29, sp, 0              // Sets x29 (FP) to current sp
@@ -131,9 +199,13 @@ str    w0, [x29, 44]           // Store atoi result
 ldr    w0, [x29, 44]           // Load the result
 bl     func                    // Call func with atoi result as argument
 cmp    w0, 0                   // Compare return value with 0
+
+
 ```
 
-At the end, we know that func needs `27 - input = 0`. Hence `input = 27`. Converting this to hex gives the flag `picoCTF{0000001b}`
+In the `main` function, the stack is initialized by first pushing the frame pointer (`x29`) and link register (`x30`) to allocate space for local variables. The program's argument count (`argc`) is stored at `x29+28`, and the argument vector (`argv`) is stored at `x29+16`. The first input argument (`argv[1]`) is loaded, and `atoi` is called to convert it into an integer, storing the result on the stack. The integer is passed to `func`, and its return value is compared to zero. If the result is zero, the message "You win!" is printed.
+
+At the end, we know that func needs `27 - input = 0` (compare between `w0` and `0` at the end of `main`). Hence `input = 27`. Converting this to hex gives the flag `picoCTF{0000001b}`
 
 **Learnt:** 
 1. workings of a little bit of Assembly
