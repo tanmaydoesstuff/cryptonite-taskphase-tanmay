@@ -171,3 +171,27 @@ Using that tool, I just played the audio and it output an image that included th
 **Challenges/Wrong Approaches**: Unable to find SSTV decoders for linux that were working properly
 
 **References:** https://www.qsl.net/on6mu/rxsstv.htm
+
+---
+
+## Redaction gone wrong
+
+**Flag: `picoCTF{C4n_Y0u_S33_m3_fully}`**
+**Difficulty:** `easy`
+
+We are given a PDF file with some critical data that has not been redacted correctly. We can obtain the flag on simply copying and pasting the text to a text editor.
+
+```
+Financial Report for ABC Labs, Kigali, Rwanda for the year 2021.  
+Breakdown - Just painted over in MS word.  
+Cost Benefit Analysis 
+Credit Debit 
+This is not the flag, keep looking 
+Expenses from the    
+picoCTF{C4n_Y0u_S33_m3_fully} 
+Redacted document. 
+```
+
+**Learnt:** to try the simplest possible solution first
+
+**Challenges/Wrong Approaches**: Was thinking I'd have to convert the pdf file to text.
