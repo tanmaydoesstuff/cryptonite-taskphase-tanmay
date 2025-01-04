@@ -17,3 +17,27 @@ Tools like [binwalk](https://github.com/ReFirmLabs/binwalk) help us identify fil
 
 ## Encodings
 There are a lot of online decoders, including [dcode.fr](https://dcode.fr/), [cryptii](https://cryptii.com) and [CyberChef](https://gchq.github.io/CyberChef/). These can help you decode from a variety of data formats including hexadecimal, binary, ASCII, base 64, etc. among other decodings. [dcode.fr's cipher identifier](https://www.dcode.fr/cipher-identifier) and [boxentriq](https://www.boxentriq.com/code-breaking/cipher-identifier) also have cipher identifier, which can potentially give ideas about the encoding when stuck at something.
+
+## File Formats 
+### Archive/Zip File
+- In the usually popular .zip files, the filenames and original file sizes are not encrypted.
+- There are also [tools](https://github.com/hyc/fcrackzip) for bruteforcing zip passwords.
+- There are tools like JohnTheRipper for bruteforcing zip passwords, as detailed [here](https://defendtheweb.net/article/using-john-the-ripper-for-password-cracking).
+- There is an attack to decrypt zip files using legacy encryption techniques when a plaintext file from that zip archive is available, as detailed [here](https://github.com/kimci86/bkcrack).
+
+### Image Files
+- `$ exiftool image` to find an image's metadata fields.
+- `aperisolve.fr` is really helpful online tool for `zsteg`, `stegsolve` and other steganography challenges.
+- Corrupted files can sometime be repaired using tools found online on Github or elsewhere.
+- QR codes can also be given in challenges, to be recreated if they are corrupted ([use this tool](https://merri.cx/qrazybox/)) or [manipulate the file](http://datagenetics.com/blog/november12013/index.html) such that the qr code becomes scannable.
+
+### Packet Capture
+- PCAP or packet capture file tells us about network traffic data.
+- We can use programs like [Wireshark](https://www.wireshark.org/) and then look for the relevant data.
+- [Dynamite Labs](https://lab.dynamite.ai/) can also be used for analysing pcap files online.
+
+### Audio files
+- Use Audacity to analyse/manipulate given audio
+- Try the spectrogram tool which hides text in audio.
+
+[Read](https://trailofbits.github.io/ctf/forensics/index.html) about analysing other file types at the TrailofBits CTF Guide.
