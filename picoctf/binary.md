@@ -1,7 +1,7 @@
 ## heap0
 
 **Flag: `picoCTF{my_first_heap_overflow_749119de}`**
-**Difficulty:** `easy`
+**Perceived Difficulty:** `easy`
 
 We run the source file to find two memory addresses `0x5a911a7f42b0` and `0x5a911a7f42d0`. Since these memory addresses are close enough to each other, we can overwrite the data in one of the them by providing a writing data to the buffer with a value greater than the difference of their memory addresses. We perform a heap overflow as overwriting `safe_var` will allow the flag to be read.
 
@@ -57,8 +57,8 @@ https://en.wikipedia.org/wiki/Heap_overflow
  
 ## buffer overflow 0
 
-**Flag: `picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}`
-Difficulty:** `easy`
+**Flag: `picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}`**
+**Perceived Difficulty:** `easy`
 
 Analysing the binary,
 ```
@@ -130,7 +130,7 @@ https://www.allaboutcircuits.com/textbook/digital/chpt-2/binary-overflow/
 ## format string 0
 
 **Flag: `picoCTF{7h3_cu570m3r_15_n3v3r_SEGFAULT_a1d85b3e}`
-Difficulty:** `easy`
+Perceived Difficulty:** `easy`
 
 Analysing the given binary,
 ```
