@@ -1,7 +1,7 @@
 ## Forbidden Paths
 
 **Flag: `picoCTF{7h3_p47h_70_5ucc355_6db46514}`**
-**Difficulty:** `easy`
+**Perceived Difficulty:** `easy`
 
 This was a simple challenge based on understanding of file paths. The webpage had a portal that could only read relative file paths.
 
@@ -20,7 +20,7 @@ Since it was mentioned that the website files are in the `/usr/share/nginx/html/
 ## Cookies
 
 **Flag:`picoCTF{3v3ry1_l0v3s_c00k135_bb3b3535}`**
-**Difficulty:** `easy`
+**Perceived Difficulty:** `easy`
 
 On reading the challenge, we had been given a web portal with one form field, where my initial guess was to enter different values, and see how the "cookie" in the "Application" tab of the webpage changed.
 
@@ -48,15 +48,15 @@ Since it was time consuming to manually try to change every variable, I tried to
 ## SOAP
 
 **Flag: `picoCTF{XML_3xtern@l_3nt1t1ty_e5f02dbf}`**
-**Difficulty:** `medium`
+**Perceived Difficulty:** `medium`
 
 On opening the web portal and using `Inspect Element`, we find a file in the sources called `xmlDetailsCheckPayload.js`. On further searching for XML vulnerabilities, we are pointed to a XXE injection. 
 
-![[web_soap_1.png]]
+![](/media/web_soap_1.png)
 
 Then, under the `Network` tab in `Inspect Element`, we monitor traffic and observe that on pressing the details button on the web portal, a `POST` request is made, called `data`. 
 
-![[web_soap_2.png]]
+![](/media/web_soap_2.png)
 
 Then, when we use the standard payload to exploit XXE to obtain files. In this case, we're trying to obtain the contents of the `/etc/passwd` file, so the payload is:
 
@@ -74,7 +74,7 @@ Then, when we use the standard payload to exploit XXE to obtain files. In this c
 
 On passing this payload, the data file now updated to contain the flag.
 
-![[web_soap_3.png]]
+![](/media/web_soap_3.png)
 
 **Learnt:** XXE injection, burp suite
 
@@ -88,7 +88,7 @@ https://en.wikipedia.org/wiki/SOAP
 ## Roboto Sans
 
 **Flag: `picoCTF{Who_D03sN7_L1k5_90B0T5_718c9043}`**
-**Difficulty:** `easy`
+**Perceived Difficulty:** `easy`
 
 My initial guess was to look up the font files, since "Roboto Sans" is the name of a font. But on going through those files, I wasn't able to find any significant leads.
 
@@ -119,7 +119,7 @@ https://en.wikipedia.org/wiki/Robots.txt
 ## Power Cookie
 
 **Flag: `picoCTF{gr4d3_A_c00k13_65fd1e1a}`**
-**Difficulty:** `easy`
+**Perceived Difficulty:** `easy`
 
 As suggested by the challenge name, my initial guess was to manipulate the cookie to appear as another user. In this case, the website asked us to login as guest. On navigating to the `Application` tab, under `Cookies`, we find cookie `isAdmin` with value set to `0`. On setting this value to `1` (or true), the flag is obtained.
 
