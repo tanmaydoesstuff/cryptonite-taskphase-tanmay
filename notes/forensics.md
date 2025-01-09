@@ -1,8 +1,7 @@
 # Forensics
 ## File formats
 - Use the command `$ file [file]` from the `libmagic` library to identify the filetype of a file. However, this might lead to no useful information/may be a red herring.
-- Files are sometimes embedded within files, in which case the `file` command only tells us about the file contained inside another file, leading to misleading info.
-- There are also other available softwares like [TrID](https://mark0.net/soft-trid-e.html) which cover obscure & proprietary data formats and show probability percentages.
+- Files are sometimes embedded within files, in which case the `file` command only tells us about the file contained inside another file.
 - File formats aren't very useful alone usually. Example, a file can be another format, or one file could be appended to another.
 
 ## Magic bytes
