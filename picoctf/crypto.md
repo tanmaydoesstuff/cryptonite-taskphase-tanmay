@@ -1,6 +1,6 @@
 ## C3
 **Flag: `picoCTF{adlibs}`**
-**Difficulty:** `medium`
+**Perceived Difficulty:** `medium`
 
 In this challenge, we are given a program, that we need to reverse the logic for to obtain the solution. This can be figured out since the encoder is given to us.
 
@@ -66,7 +66,7 @@ On running this, we finally get the flag `picoCTF{adlibs}`.
 ---
 ## Custom Encryption
 **Flag: `picoCTF{custom_d2cr0pt6d_e4530597}`**
-**Difficulty:** `medium`
+**Perceived Difficulty:** `medium`
 
 In this challenge, we are given a custom encryption which we need to reverse the logic for. We are also given a, b and the cipher. On researching a bit, we can easily find out that this challenge entails the Diffie Hellman key exchange.
 
@@ -229,7 +229,7 @@ https://www.geeksforgeeks.org/implementation-diffie-hellman-algorithm/
 
 ## miniRSA
 **Flag: `picoCTF{n33d_a_lArg3r_e_ccaa7776}`**
-**Difficulty:** `hard`
+**Perceived Difficulty:** `hard`
 
 How RSA works is that `N` is a really large number, which is a product of two prime numbers (both very large and with a large difference). `e`, the public exponent is also typically large, but in this channel, it has been given as `3`, which we can exploit as a vulnerability.
 
