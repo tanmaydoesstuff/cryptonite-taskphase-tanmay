@@ -1,7 +1,7 @@
 ## Trivial Flag Transfer Protocol
 
 **Flag: `picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}`**
-**Difficulty:** `medium`
+**Perceived Difficulty:** `medium`
 
 There is a file given called `tftp.pcapng`. On reading up about [pcapng](https://pcapng.com/) file format, we learn that it is a packet capture file containing multiple other files, which can be read using Wireshark. On loading the file into Wireshark, we see the following files,
 
@@ -60,7 +60,7 @@ steghide man page
 ## tunn3l_v1s10n
 
 **Flag: `picoCTF{qu1t3_a_v13w_2020}`
-Difficulty:** `medium`
+Perceived Difficulty:** `medium`
 
 We are given a file called `tunn3l_v1s10n` but the filetype is not identifiable.
 
@@ -141,7 +141,7 @@ https://docs.fileformat.com/image/bmp/
 ## So Meta
 
 **Flag: `picoCTF{s0_m3ta_fec06741}`**
-**Difficulty:** `easy`
+**Perceived Difficulty:** `easy`
 
 We are given a picture, and the challenge title asks us to explore the metadata. I simply scanned for metadata using [aperisolve.fr](https://aperisolve.fr) and found the flag in the artist parameter of the image.
 
@@ -154,7 +154,7 @@ We are given a picture, and the challenge title asks us to explore the metadata.
 ## m00walk
 
 **Flag: `picoCTF{beep_boop_im_in_space}`**
-**Difficulty:** `easy`
+**Perceived Difficulty:** `easy`
 
 We are given a .wav file and on playing it we get a hint of encoded data. My initial guess was to try for a spectrogram, using Audacity, but that didn't lead to any valuable results.
 
@@ -177,7 +177,7 @@ Using that tool, I just played the audio and it output an image that included th
 ## Redaction gone wrong
 
 **Flag: `picoCTF{C4n_Y0u_S33_m3_fully}`**
-**Difficulty:** `easy`
+**Perceived Difficulty:** `easy`
 
 We are given a PDF file with some critical data that has not been redacted correctly. We can obtain the flag on simply copying and pasting the text to a text editor.
 
