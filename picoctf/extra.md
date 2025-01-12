@@ -2,6 +2,7 @@
 ## blast from the past
 **Flag: `picoCTF{71m3_7r4v311ng_p1c7ur3_3e336564}`**
 **Perceived Difficulty:** `medium`
+
 In this challenge, we're asked to edit the image creation timestamp to a given timestamp (which notably is as close to the start of Unix timestamps as possible).
 
 Here's the terminal snippet:
@@ -203,8 +204,8 @@ picoCTF{71m3_7r4v311ng_p1c7ur3_3e336564}
 ---
 ## mob psycho
 **Flag: `picoCTF{ax8mC0RU6ve_NX85l4ax8mCl_b112ae57}`**
-**Perceived Difficulty:** `medium
-`
+**Perceived Difficulty:** `medium`
+
 In this challenge, we are given an `.apk` file. On reading up about it, we find out that these files can be unzipped, so we proceed with that.
 
 We find a lot of directories and files, and try to look up for anything relevant within these files. We find an interesting file at `/mobpsycho/res/color/flag.txt`.
@@ -468,7 +469,7 @@ In this challenge, in the `script.js` file, we see the password being checked in
 ---
 ## jAuth
 **Flag: `picoCTF{succ3ss_@u7h3nt1c@710n_72bf8bd5}`**
-**`Perceived Difficulty:`** `medium`
+**Perceived Difficulty:** `medium`
 
 In this challenge, we are provided with a web portal. We login using the test credentials provided in the challenge to notice that whenever a user logs in, a cookie is added.
 On further inspection we find that it is a decodable `JWT` cookie, so I try looking for exploits  related to it.
@@ -486,14 +487,14 @@ I was forgetting to remove the signature part of the JWT while editing only the 
 ---
 ## MatchTheRegex
 **Flag: `picoCTF{succ3ssfully_matchtheregex_2375af79}`**
-**`Perceived Difficulty:`** `easy`
+**Perceived Difficulty:** `easy`
 
 In this challenge, we initially use Inspect to find that website source file `script.js` has a comment `^p.....F!?`. This is probably hinting us to the name of the competition, `picoCTF`, which is also a part of the flag. So after trying to understand the `script.js` file, we input `picoCTF` in the specified field, which gives us the flag.
 
 ---
 ## search source
 **Flag: `picoCTF{1nsp3ti0n_0f_w3bpag3s_ec95fa49}`**
-**`Perceived Difficulty:`** `easy`
+**Perceived Difficulty:** `easy`
 
 A simple challenge, where on checking the source, we find an image called `transparent.png`. But on further inspection, this image doesn't lead anywhere. We search for `picoCTF` in source files, and find the flag in `style.css`. 
 
@@ -507,14 +508,14 @@ This doesn't deserve a writeup, smh. We find the password/flag in the source.
 ---
 ## secrets
 **Flag: `picoCTF{succ3ss_@h3n1c@10n_39849bcf}`**
-**`Perceived Difficulty:`** `easy`
+**Perceived Difficulty:** `easy`
 
 We try to look into the source files, in search of a `secret` file. But alas, we don't find anything. Then looking at the hint, we try looking into the folder `/secret/`. (I was making the stupid mistake of just typing `/secret` which obviously didn't work because this was a directory and not a backlink URL). Within this folder, we find another folder `hidden`. Got it, this is a maze tunnel thingy (`/secret/hidden/`). Then `/secret/hidden/superhiddenflag/` is found. Flag is obtained on selecting all the text on that webpage as it is the same color as the background. 
 
 ---
 ## it is my birthday
 **Flag: `picoCTF{c0ngr4ts_u_r_1nv1t3d_aad886b9}`**
-**`Perceived Difficulty:`** `medium`
+**Perceived Difficulty:** `medium`
 
  The description mentions about having the "same MD5 hash, but slightly different". On reading up, I learnt this: "MD5 is calculated exclusively from the contents of the file, and as such, two identical files must have the same MD5 hash. (The opposite does not hold true, however: it is possible for two different files to have the same MD5 hash)."
  
@@ -526,6 +527,6 @@ We try using the files `hello.pdf` and `erase.pdf`, which is one of the examples
 ---
 ## picobrowser
 **Flag: `picoCTF{p1c0_s3cr3t_ag3nt_e9b160d0}`**
-**`Perceived Difficulty:`** `medium`
+**Perceived Difficulty:** `medium`
 
 Another challenge that doesn't deserve it's own writeup. We need to change the user-agent to `PicoBrowser` which can be done through an extension or in Chrome.
