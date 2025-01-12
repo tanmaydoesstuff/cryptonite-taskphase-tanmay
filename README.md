@@ -14,7 +14,6 @@ Cryptnotes is a repository of cybersecurity write-ups.  It covers challenges fro
 - [CTF Events](#ctf-events)
   - [OasisCTF](#oasisctf-2024)
   - [niteCTF 2024](#nitectf-2024)
-- [License](#license)
 
 ---
 
@@ -36,9 +35,10 @@ Cryptnotes is a repository of cybersecurity write-ups.  It covers challenges fro
 - [Forensics](https://github.com/tnmyhere/cryptnotes/blob/main/picoctf/forensics.md)
 - [Reverse Engineering](https://github.com/tnmyhere/cryptnotes/blob/main/picoctf/rev.md)
 - [Web Exploitation](https://github.com/tnmyhere/cryptnotes/blob/main/picoctf/web.md)
+- [Extra Challenges](https://github.com/tnmyhere/cryptnotes/blob/main/picoctf/extra.md)
 
 ### pwn.college Linux Luminarium
-Dive into Linux fundamentals:
+Linux fundamentals:
 
 1. [Module 1: Hello Hackers](https://github.com/tnmyhere/cryptnotes/tree/main/pwn.college/1_hellohackers)
 2. [Module 2: Pondering Paths](https://github.com/tnmyhere/cryptnotes/tree/main/pwn.college/2_ponderingpaths)
@@ -62,9 +62,3 @@ Dive into Linux fundamentals:
 
 ### niteCTF 2024
 [Writeups](https://github.com/tnmyhere/cryptnotes/blob/main/misc/nitectf.md)
-
----
-
-## License
-
-This repository is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use and modify the content, attributing back to this repository.
