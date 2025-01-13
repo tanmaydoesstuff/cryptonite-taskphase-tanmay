@@ -3,7 +3,7 @@
 **Flag: `picoCTF{7h3_p47h_70_5ucc355_6db46514}`**
 **Perceived Difficulty:** `easy`
 
-This was a simple challenge based on understanding of file paths. The webpage had a portal that could only read relative file paths.
+This was a simple challenge based on understanding of directory traversal. The webpage had a portal that could only read relative file paths.
 
 ![](/media/web_forbiddenpaths_1.png)
 
@@ -90,7 +90,7 @@ https://en.wikipedia.org/wiki/SOAP
 **Flag: `picoCTF{Who_D03sN7_L1k5_90B0T5_718c9043}`**
 **Perceived Difficulty:** `easy`
 
-My initial guess was to look up the font files, since "Roboto Sans" is the name of a font. But on going through those files, I wasn't able to find any significant leads.
+My initial guess was to look up the font files, since "Roboto" is the name of a font. But on going through those files, I wasn't able to find any significant leads.
 
 My second guess was the `robots.txt` file of the website, a text file that tells search engine crawlers which URLs and directories on a website they can access.
 
@@ -110,7 +110,7 @@ On trying both backlinks, we find the flag by navigating to `/js/myfile.txt` on 
 
 **Learnt:** robots.txt
 
-**Challenges/Wrong Approaches:** I tried to check the font files first, since the website also used the "Roboto Sans" font.
+**Challenges/Wrong Approaches:** I tried to check the font files first, since the website also used the "Roboto" font.
 
 **References:** 
 https://en.wikipedia.org/wiki/Robots.txt
