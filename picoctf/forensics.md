@@ -3,7 +3,7 @@
 **Flag: `picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}`**
 **Perceived Difficulty:** `medium`
 
-There is a file given called `tftp.pcapng`. On reading up about [pcapng](https://pcapng.com/) file format, we learn that it is a packet capture file containing multiple other files, which can be read using Wireshark. On loading the file into Wireshark, we see the following files,
+There is a file given called `tftp.pcapng`. On reading up about [pcapng](https://pcapng.com/) file format, we learn that it is a packet capture file containing multiple other files, which can be read using Wireshark. On loading the file into Wireshark, we see the following requests in network traffic,
 
 ![](/media/forensics_tftp_1.png)
 
@@ -31,7 +31,8 @@ Decrypting the files:
 
 We understand that the key would be `DUEDILIGENCE` to find the hidden data in the images. 
 
-```tnmyhere@luna-popos:~/Desktop/tftp$ steghide extract -sf picture1.bmp -p DUEDILIGENCE
+```
+tnmyhere@luna-popos:~/Desktop/tftp$ steghide extract -sf picture1.bmp -p DUEDILIGENCE
 steghide: could not extract any data with that passphrase!
 tnmyhere@luna-popos:~/Desktop/tftp$ steghide extract -sf picture2.bmp -p DUEDILIGENCE
 steghide: could not extract any data with that passphrase!
@@ -158,7 +159,7 @@ We are given a picture, and the challenge title asks us to explore the metadata.
 
 We are given a .wav file and on playing it we get a hint of encoded data. My initial guess was to try for a spectrogram, using Audacity, but that didn't lead to any valuable results.
 
-Then I read the hint given, which is "How did pictures from the moon landing get sent back to Earth?". Googling for this gives us something called `SSTV`, which was used to convert audio data to images.
+Then I read the hint given, which is "How did pictures from the moon landing get sent back to Earth?". [Googling for this]([url](https://en.wikipedia.org/wiki/Apollo_TV_camera)) gives us something called `SSTV` or ` Slow Scan Television` which was used to convert audio data to images.
 
 Then I found a decoder tool called `RX-SSTV` to decrypt the encoded data to convert it to an image. But it was only available for Windows. I then found another tool available for mobile on Android called `Robots36`.
 
@@ -194,4 +195,4 @@ Redacted document.
 
 **Learnt:** to try the simplest possible solution first
 
-**Challenges/Wrong Approaches**: Was thinking I'd have to convert the pdf file to text.
+**Challenges/Wrong Approaches**: Was thinking I'd have to convert the pdf file to text through some encoder.
