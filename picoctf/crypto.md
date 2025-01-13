@@ -231,7 +231,7 @@ https://www.geeksforgeeks.org/implementation-diffie-hellman-algorithm/
 **Flag: `picoCTF{n33d_a_lArg3r_e_ccaa7776}`**
 **Perceived Difficulty:** `hard`
 
-How RSA works is that `N` is a really large number, which is a product of two prime numbers (both very large and with a large difference). `e`, the public exponent is also typically large, but in this channel, it has been given as `3`, which we can exploit as a vulnerability.
+How RSA works is that `N` is a really large number, which is a product of two prime numbers (both very large and with a large difference). `e`, the public exponent is also typically large, but in this challenge, it has been given as `3`, which we can exploit as a vulnerability.
 
 In RSA, the ciphertext C is calculated as: `C=M^e mod  N`. Decrypting the message involves finding `M=C^d mod  N` (where `d` is the private key). The private key `d` satisfies `d⋅e≡1modϕ(N)`, where `ϕ(N)=(p−1)(q−1)` is the totient function of N.
 
