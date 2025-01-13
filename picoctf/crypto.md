@@ -238,7 +238,7 @@ In RSA, the ciphertext C is calculated as: `C=M^e mod  N`. Decrypting the me
 Since `e=3`, `C=M^3 mod N`.
 So, `M^3=k⋅N+C` where `k` is a small integer. So we need to loop through different small values of k, which when put in the equation give us the value for `M^3` that has a perfect cube root. That cube root would be the plaintext.
 
-In this particular question, `k=0`, we basically need to compute the exact cube root of `M^3` or `C`. I did this using an online calculator and got M as `13016382529449106065894479374027604750406953699090365388203708028670029596145277`. 
+In this particular question, `k=0`, we basically need to compute the exact cube root of `C^3` or `M`. I did this using an online calculator and got M as `13016382529449106065894479374027604750406953699090365388203708028670029596145277`. 
 Converting this to plaintext, we obtain the flag `picoCTF{n33d_a_lArg3r_e_ccaa7776}`.
 
 **Learnt:** 
