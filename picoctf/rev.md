@@ -1,7 +1,7 @@
 ## gdb baby step 1
 
 **Flag: `picoCTF{549698}`**
-**Difficulty:** `medium`
+**Perceived Difficulty:** `medium`
 
 We use `gdb` to find all the functions. 
 Then disassemble the `main` function.
@@ -70,7 +70,7 @@ https://keleshev.com/eax-x86-register-meaning-and-history/
 ## vault door 3
 
 **Flag: `picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_c79a21}`**
-**Difficulty:** `medium`
+**Perceived Difficulty:** `medium`
 
 In this challenge, we are given a challenge file. We try to understand and reverse the code to obtain the flag.
 
@@ -115,7 +115,7 @@ https://bito.ai/resources/java-byte-array-java-explained
 ---
 ## ARMssembly 1
 **Flag: `picoCTF{0000001b}`**
-**Difficulty:** `hard`
+**Perceived Difficulty:** `hard`
 
 In this challenge we have been given an assembly file, going through it bit by bit,
 ```
@@ -216,3 +216,5 @@ I didn't understand the code at all, at the start. After a lot of googling, wand
 **References:**
 https://courses.cs.washington.edu/courses/cse469/19wi/arm64.pdf
 
+
+PS: Code Reversing scripts generated with assistance from LLM models.
