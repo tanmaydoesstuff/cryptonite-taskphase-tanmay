@@ -76,9 +76,11 @@ On passing this payload, the data file now updated to contain the flag.
 
 ![](/media/web_soap_3.png)
 
+Edit: I learnt later that the name of this challenge is `SOAP` which stands for Simple Object Access Protocol. It is messaging protocol that allows applications to exchange information over the internet and is based on XML. Wouldn't have required that hint if I had googled a bit more.
+
 **Learnt:** XXE injection, burp suite
 
-**Challenges/Wrong Approaches:** I had to figure how to send `POST` requests through burp suite, but got no response. So I tried to use the `Network` tab to edit the `POST` request and send it with the modified payload instead.
+**Challenges/Wrong Approaches:** I had to figure how to send `POST` requests through burp suite in repeater, but got no response. So I tried to use the `Network` tab to edit the `POST` request and send it with the modified payload instead.
 
 **References:** 
 https://portswigger.net/web-security/xxe
@@ -96,11 +98,11 @@ My second guess was the `robots.txt` file of the website, a text file that tells
 
 ![](/media/web_robotosans_1.png)
  
- We find a strange text that seems to be encoded in base 64. On decoding, it gives out an error that the input is malformed. 
+We find a strange text that seems to be encoded in base 64. On decoding, it gives out an error that the input is malformed. 
 
 ![](/media/web_robotosans_2.png)
  
- But when we try to decrypt each line from the text individually from base 64, we do get some output as seen below.
+But when we try to decrypt each line from the text individually from base 64, we do get some output as seen below.
 
 ![](/media/web_robotosans_3.png)
 
