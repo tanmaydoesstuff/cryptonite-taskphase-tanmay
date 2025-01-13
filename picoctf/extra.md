@@ -499,13 +499,6 @@ In this challenge, we initially use Inspect to find that website source file `sc
 A simple challenge, where on checking the source, we find an image called `transparent.png`. But on further inspection, this image doesn't lead anywhere. We search for `picoCTF` in source files, and find the flag in `style.css`. 
 
 ---
-
-## login
-**Flag: `picoCTF{53rv3r_53rv3r_53rv3r_53rv3r_53rv3r}`**
-
-This doesn't deserve a writeup, smh. We find the password/flag in the source. 
-
----
 ## secrets
 **Flag: `picoCTF{succ3ss_@h3n1c@10n_39849bcf}`**
 **Perceived Difficulty:** `easy`
@@ -527,6 +520,6 @@ We try using the files `hello.pdf` and `erase.pdf`, which is one of the examples
 ---
 ## picobrowser
 **Flag: `picoCTF{p1c0_s3cr3t_ag3nt_e9b160d0}`**
-**Perceived Difficulty:** `medium`
+**Perceived Difficulty:** `easy`
 
 Another challenge that doesn't deserve it's own writeup. We need to change the user-agent to `PicoBrowser` which can be done through an extension or in Chrome.
